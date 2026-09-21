@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nabby Malay cuisine</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .product.img{
+            width: 50%;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .card-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card h3{
+            margin-top: 10px;
+            font-size: 18px;
+            color: #b33;
+        }
+
+        .card p{
+            font-size: 14px;
+            color: #333;
+        }
+
+        .card:hover{
+            transform: scale(1.03);
+        }
+
+        .footer-text{
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>Nabby Malay Cuisine</h1>
+        </div>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#foods">Foods</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div data-role="content">
+            <h2>Welcome to Our Kitchen</h2>
+            <p>"Serving rich, flavorful, and deeply aromatic Malay dishes crafted to perfection."</p>
+            <h3>Featured Items</h3>
+
+            <div class="card-grid">
+                <div class="card">
+                    <img src="img/img/nasi lemak.jpg" alt="Nasi Lemak">
+                    <h3>Nasi Lemak</h3>
+                    <p>"Fragrant coconut rice served with spicy sambal, boiled egg, crispy anchovies, and roasted peanuts."</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img/rendang.jpg" alt="Rendang">
+                    <h3>Rendang</h3>
+                    <p>"Slow-cooked tender meat simmered in rich coconut milk and aromatic spices until perfectly caramelized."</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img/canai.jpg" alt="Canai">
+                    <h3>Canai</h3>
+                    <p>"Crispy on the outside, soft and fluffy on the inside—traditional Malaysian flatbread served with savory curry."</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/img/gulai kawah.jpg" alt="Gulai Kawah">
+                    <h3>Gulai Kawah</h3>
+                    <p>"A rich, slow-cooked traditional meat curry infused with a robust blend of local herbs and spices."</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <h4 class="footer-text">&copy;2026 Nabby Malay Cuisine</h4>
+        </div>
+    </div>
+
+    <!--Foods Page-->
+    <div data-role="page" id="foods">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+            <h1>Nabby Malay Cuisine Foods</h1>
+        </div>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#foods" class="ui-btn-active">Foods</a></li>
+                <li><a href="#contact">Contact</a></li>
+[21/9/2026 3:49 PM] nana omel: </ul>
+        </div>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <img src="img/img/nasi lemak.jpg" alt="Nasi Lemak">
+                    <h2>Nasi Lemak</h2>
+                    <p>"Fragrant coconut rice served with spicy sambal, boiled egg, crispy anchovies, and roasted peanuts."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 8.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Nasi Lemak" data-price="RM 8.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+
+                <li>
+                    <img src="img/img/rendang.jpg" alt="Rendang">
+                    <h2>Rendang</h2>
+                    <p>"Slow-cooked tender meat simmered in rich coconut milk and aromatic spices until perfectly caramelized."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 12.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Rendang" data-price="RM 12.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+
+                <li>
+                    <img src="img/img/canai.jpg" alt="Canai">
+                    <h2>Canai</h2>
+                    <p>"Crispy on the outside, soft and fluffy on the inside—traditional Malaysian flatbread served with savory curry."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 2.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Canai" data-price="RM 2.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+
+                <li>
+                    <img src="img/img/gulai kawah.jpg" alt="Gulai Kawah">
+                    <h2>Gulai Kawah</h2>
+                    <p>"A rich, slow-cooked traditional meat curry infused with a robust blend of local herbs and spices."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 10.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Gulai Kawah" data-price="RM 10.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+
+                <li>
+                    <img src="img/img/rojak.jpg" alt="Rojak">
+                    <h2>Rojak</h2>
+                    <p>"A vibrant local salad of fresh fruits and crispy fritters, tossed in a rich, sweet, and spicy shrimp paste dressing."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 6.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Rojak" data-price="RM 6.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+
+                <li>
+                    <img src="img/img/char kuew teow.jpg" alt="Char kuew teow">
+                    <h2>Char Kuew Teow</h2>
+                    <p>"Stir-fried flat rice noodles cooked over high heat with juicy prawns, eggs, bean sprouts, and a signature smoky flavor."</p>
+                    <p class="price" style="color: #d9534f; font-weight: bold; margin-top: 5px;">RM 7.00</p>
+                    <button class="order-btn ui-btn ui-btn-b ui-corner-all ui-mini" data-name="Char Kuew Teow" data-price="RM 7.00" style="width: 80px; font-size: 11px; padding: 4px; margin-top: 5px;">Order</button>
+                </li>
+            </ul>
+
+            <!-- Order List Section -->
+            <div style="margin-top: 30px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 10px;">
+                <h3>Your Order List:</h3>
+                <ul id="order-list" style="padding-left: 20px; color: #333; margin-bottom: 0;">
+[21/9/2026 3:49 PM] nana omel: <li>No orders placed yet.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <h4 class="footer-text">&copy;2026 Nabby Malay Cuisine</h4>
+        </div>
+    </div>
+
+    <!--Contact Page-->
+    <div data-role="page" id="contact">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+            <h1>Contact Us</h1>
+        </div>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#foods">Foods</a></li>
+                <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+            </ul>
+        </div>
+
+        <div data-role="content">
+            <p>We'd love to hear feedback from you! Please fill out the form below:</p>
+
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="you@example.com">
+                
+                <label for="message">Feedback:</label>
+                <textarea name="message" id="message" placeholder="Type your feedback here..."></textarea>
+
+                <input type="submit" value="Submit" data-theme="b">
+            </form>
+        </div>
+
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <h4 class="footer-text">&copy;2026 Nabby Malay Cuisine</h4>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        var orderItems = [];
+
+        $(document).on('click', '.order-btn', function() {
+            var foodName = $(this).attr('data-name');
+            var foodPrice = $(this).attr('data-price');
+
+
+            orderItems.push(foodName + " (" + foodPrice + ")");
+
+            alert("Successfully ordered: " + foodName + "! Please click OK to see your order.");
+
+            var listHtml = "";
+            orderItems.forEach(function(item, index) {
+                listHtml += "<li>" + (index + 1) + ". " + item + "</li>";
+            });
+            $('#order-list').html(listHtml);
+        });
+
+        $(document).on('submit', '#contact-form', function(e) {
+            e.preventDefault(); 
+            alert("Registration is successful! Please click OK to see your result.");
+            $('#contact-form')[0].reset(); 
+        });
+    </script>
+</body>
+</html>
